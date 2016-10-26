@@ -2,10 +2,30 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Hello!</title>
+    <title>Petros Solution</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="src/NewSearch.js"></script>
+
 </head>
 <body>
 
-<h1>Hello!</h1>
+<h1>GitHub Search Tool</h1>
+
+<div>
+
+  <form class="box" id='tfnewsearch'>
+    <div class='form-uname'>
+
+        <input id='nameField' type='text' placeholder="Search Username..." maxlength='25'></input>
+        <button id='subButton' onclick="getUserName();" type='button'>search</button>
+        <p id='view'></p>
+        <p class="error" id='non'></p>
+    </div>
+</form>
+
+</div>
+
+
+
 </body>
 </html>

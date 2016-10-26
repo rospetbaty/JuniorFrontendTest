@@ -1,0 +1,19 @@
+body{
+  background-color: #D7D7D7;
+  margin: auto;
+  text-align: center;
+
+}
+
+.box{
+  width: 300px;
+  height: auto;
+  border: 3px solid white;
+  background-color: white;
+  box-shadow:10px 10px 5px #888888;
+  padding: 10px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin:auto;
+  padding-bottom: 50px;
+}
