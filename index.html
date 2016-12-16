@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>Petros Solution</title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="src/NewSearch.js"></script>
-
 </head>
 <body>
 
@@ -15,17 +13,17 @@
 
   <form class="box" id='tfnewsearch'>
     <div class='form-uname'>
-
         <input id='nameField' type='text' placeholder="Search Username..." maxlength='25'></input>
-        <button id='subButton' onclick="getUserName();" type='button'>search</button>
+        <button id='subButton' type='button' onclick='getUserName()'>search</button>
         <p id='view'></p>
-        <p class="error" id='non'></p>
+        <br></br>
+        <p class="repolist" id='repos'></p>
     </div>
 </form>
 
 </div>
 
-
+<script src="src/NewSearch.js"></script>
 
 </body>
 </html>
