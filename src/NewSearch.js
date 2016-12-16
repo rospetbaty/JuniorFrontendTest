@@ -50,7 +50,7 @@ function repoList(){
     container.innerHTML = `<br></br><h2 style="border-bottom:2px solid #000;padding:10px">Repositories</h2>
     <ul>${repos}</ul>`;
   } else {
-    container.innerHTML = "<p>This user has no repos";
+    container.innerHTML = "<p>This user has no repos</p>";
   }
 });
   };
