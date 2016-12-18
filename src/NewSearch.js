@@ -14,7 +14,8 @@ function getUserName() {
       let view = document.getElementById("view")
       view.innerHTML = `<div>
         <img width="150" height="150" align="left" src="${data['avatar_url']}" />
-        <p "text-align:right"><font size="2" color="grey">@${data['login']}</font><br/><em><b>${data['name']}</b></em><br/>
+        <p style="text-align:right"><font size="2" color="grey">@${data['login']}
+        </font><br/><em><b>${data['name']}</b></em><br/>
         ${data['bio']}</p>
         </div>`
         // calling repoList
@@ -22,7 +23,7 @@ function getUserName() {
     })
     .catch(_ => {
       let view = document.getElementById("view")
-      view.innerHTML = `<p style="background-color: #ffcccc;color:red;">User ${nameField} does not exist</p>`
+      view.innerHTML = `<p class="errormessage">User ${nameField} does not exist</p>`
     })
 }
 
@@ -39,15 +40,17 @@ function repoList(){
     return resp.json()
   })
   .then(data => {
-
   const container = document.getElementById("repos");
   if (data.length > 0) {
-    const repos = data.map(repo => `<li style="border-bottom:1px solid #b3b3b3;padding:15px;list-style-type: none;">
+    const repos = data.map(repo => `<li class="repolist">
       <a href="${repo.html_url}">${repo.name}</a>
-      <span style="padding-left:10px;text-align:right;" class="stars"><img src= ./images/Octicons-star.png height="10" width="15">${repo.stargazers_count}</span>
-      <span class="forks"><img src= ./images/fork.svg height="15" width="15">${repo.forks_count}</span>
+      <span style="padding-left:10px;text-align:right;" class="stars">
+      <img src= ./images/Octicons-star.png height="15" width="15">
+      ${repo.stargazers_count}</span>
+      <span class="forks"><img src= ./images/fork.svg height="15" width="15">
+      ${repo.forks_count}</span>
     </li>`).join('');
-    container.innerHTML = `<br></br><h2 style="border-bottom:2px solid #000;padding:10px">Repositories</h2>
+    container.innerHTML = `<br></br><h2 class="repotitle">Repositories</h2>
     <ul>${repos}</ul>`;
   } else {
     container.innerHTML = "<p>This user has no repos</p>";

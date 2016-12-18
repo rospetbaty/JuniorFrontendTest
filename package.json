@@ -1,0 +1,23 @@
+{
+  "name": "githubsearchtool",
+  "version": "1.0.0",
+  "description": "## GOALS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rospetbaty/JuniorFrontendTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rospetbaty/JuniorFrontendTest/issues"
+  },
+  "homepage": "https://github.com/rospetbaty/JuniorFrontendTest#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.5.2"
+  }
+}
